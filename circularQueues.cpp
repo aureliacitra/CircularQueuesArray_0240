@@ -103,9 +103,8 @@ int main()
 
   while (true)
   {
-    try
-    {
-        {
+     try
+     {
             cout << "Menu" << endl;
             cout << "1. implement insert opertion" << endl;
             cout << "2. implemet delete operation" << endl;
@@ -122,8 +121,32 @@ int main()
                     q.insert();
                     break;
                 }
-            }
+                case '2':
+                {
+                    q.remove();
+                    break;
+                }
+                case '3':
+                {
+                    q.display();
+                    break;
+                }
+                case '4':
+                {
+                    return 0;
+                }
+                default:
+                {
+                    cout << "invalid option!!" << endl;
+                    break;
+                }
+            } 
         }
-    }
-  }
+
+        catch (exception &e)
+        {
+            cout << "ceheck for the values entered." << endl;
+        }
+        
+   }
 }
