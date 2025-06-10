@@ -2,6 +2,8 @@
 using namespace std;
 
 class Queues {
+    
+    private:
     int FRONT, REAR, max = 5;
     int queue_array[5];
 
@@ -81,7 +83,6 @@ class Queues {
             cout << queue_array[FRONT_position] << " ";
             FRONT_position++;
         }
-    }
 
     FRONT_position = 0;
 
@@ -89,7 +90,40 @@ class Queues {
         cout << queue_array[FRONT_position] << " ";
         FRONT_position++;
     }
-    
+
     cout << endl;
-   } 
+    } 
+  }
 };
+
+int main()
+{
+  Queues q;
+  char ch;
+
+  while (true)
+  {
+    try
+    {
+        {
+            cout << "Menu" << endl;
+            cout << "1. implement insert opertion" << endl;
+            cout << "2. implemet delete operation" << endl;
+            cout << "3. display values" << endl;
+            cout << "4. exit" << endl;
+            cout << " enter your choice (1-4): ";
+            cin >> ch;
+            cout << endl;
+
+            switch (ch)
+            {
+                case '1':
+                {
+                    q.insert();
+                    break;
+                }
+            }
+        }
+    }
+  }
+}
